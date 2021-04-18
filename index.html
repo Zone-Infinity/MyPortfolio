@@ -30,7 +30,7 @@
                     </div>
 
                     <ul id="navigation">
-                        <li><a class="links" href="index.html#contact">Contact</a></li>
+                        <li class="contact-link">Contact</li>
                     </ul>
                 </div>
 
@@ -204,6 +204,16 @@
     </section>
 
     <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript">
+            let btn = document.getElementsByClassName("contact-link")[0]
+            btn.addEventListener('click', function(){
+                var elmnt = document.getElementById("contact-form");
+                elmnt.scrollIntoView({
+                    behavior: "smooth"
+                });
+            })
+    </script>
 
 </body>
 
