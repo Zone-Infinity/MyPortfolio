@@ -14,7 +14,6 @@ let themeDots = document.getElementsByClassName('theme-dot')
 for (var i = 0; themeDots.length > i; i++) {
     themeDots[i].addEventListener('click', function () {
         let mode = this.dataset.mode
-
         setTheme(mode)
     });
 }
@@ -24,6 +23,11 @@ function setTheme(mode) {
     let githubStat = document.getElementById("github-stats")
     let githubStreak = document.getElementById("github-streaks")
     let heart = document.getElementById("heart")
+
+    document.getElementById("light-mode").style.borderWidth = "2px"
+    document.getElementById("blue-mode").style.borderWidth = "2px"
+    document.getElementById("green-mode").style.borderWidth = "2px"
+    document.getElementById("purple-mode").style.borderWidth = "2px"
 
     if (mode === "light") {
         theme.href = "styles/default.css"
@@ -53,5 +57,6 @@ function setTheme(mode) {
         heart.innerHTML = "💜"
     }
 
+    document.getElementById(mode+"-mode").style.borderWidth = "5px"
     localStorage.setItem("theme", mode)
 }
