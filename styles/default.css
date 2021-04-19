@@ -13,6 +13,8 @@
     --previewShadow: #f0ead6;
 
     --buttonColor: black;
+
+    --gradientColor: rgb(154, 165, 163);
 }
 
 
@@ -58,12 +60,22 @@ h6 { font-size: 16px;}
     background-color: var(--mainColor);
     border-bottom:1px solid var(--borderColor);
     overflow: auto;
+
+    background: -moz-linear-gradient(-45deg, var(--mainColor) 0%, var(--gradientColor) 100%);
+	background: -webkit-linear-gradient(-45deg, var(--mainColor) 0%, var(--gradientColor) 100%);
+	background: linear-gradient(135deg, var(--mainColor) 0%, var(--gradientColor) 100%);
 }
 
 .s2 {
     background-color: var(--secondaryColor);
     border-bottom:1px solid var(--borderColor);
     overflow: auto;
+
+    
+
+    background: -moz-linear-gradient(-45deg, var(--gradientColor) 0%, var(--secondaryColor) 100%);
+	background: -webkit-linear-gradient(-45deg, var(--gradientColor) 0%, var(--secondaryColor) 100%);
+	background: linear-gradient(135deg, var(--gradientColor) 0%, var(--secondaryColor) 100%);
 }
 
 .main-container {
@@ -176,6 +188,30 @@ h6 { font-size: 16px;}
     object-fit: cover;
     border: 2px solid var(--borderColor);
     border-radius: 50%;
+}
+
+.profile-pic {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 #theme-options-wrapper {
