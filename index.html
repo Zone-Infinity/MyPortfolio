@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="styles/default.css">
 
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
+
+    <script type="text/javascript" src="discord.12.5.3.min.js"></script>
 </head>
 
 <body>
@@ -187,23 +189,25 @@
                 <a name="contact"></a>
 
                 <label>Name</label>
-                <input class="input-field" type="text" name="name">
+                <input id="name" class="input-field" type="text" name="name">
 
                 <label>Subject</label>
-                <input class="input-field" type="text" name="subject">
+                <input id="subject" class="input-field" type="text" name="subject">
 
                 <label>Email</label>
-                <input class="input-field" type="text" name="email">
+                <input id="email" class="input-field" type="text" name="email">
 
                 <label>Message</label>
-                <textarea class="input-field" name="message"></textarea>
+                <textarea id="message" class="input-field" name="message"></textarea>
 
-                <input id="submit-btn" type="submit" value="Send">
+                <input id="submit-btn" type="submit" value="Send" onclick="sendEmail()">
             </form>
         </div>
     </section>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript" src="js/mail.js"></script>
 
     <script type="text/javascript">
             let btn = document.getElementsByClassName("contact-link")[0]
