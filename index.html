@@ -200,7 +200,7 @@
                 <label>Message</label>
                 <textarea id="message" class="input-field" name="message"></textarea>
 
-                <input id="submit-btn" type="button" value="Send" onclick="sendEmail()">
+                <input id="submit-btn" type="button" value="Send">
             </form>
         </div>
     </section>
@@ -210,13 +210,16 @@
     <script type="text/javascript" src="js/mail.js"></script>
 
     <script type="text/javascript">
-            let btn = document.getElementsByClassName("contact-link")[0]
-            btn.addEventListener('click', function(){
+            let contactBtn = document.getElementsByClassName("contact-link")[0]
+            contactBtn.addEventListener('click', function(){
                 var elmnt = document.getElementById("contact-form");
                 elmnt.scrollIntoView({
                     behavior: "smooth"
                 });
             })
+
+            let submitBtn = document.getElementById("submit-btn")
+            submitBtn.addEventListener('click', sendEmail())
     </script>
 
 </body>
