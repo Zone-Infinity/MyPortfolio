@@ -24,11 +24,6 @@ function setTheme(mode) {
     let githubStreak = document.getElementById("github-streaks")
     let heart = document.getElementById("heart")
 
-    document.getElementById("light-mode").style.borderWidth = "2px"
-    document.getElementById("blue-mode").style.borderWidth = "2px"
-    document.getElementById("green-mode").style.borderWidth = "2px"
-    document.getElementById("purple-mode").style.borderWidth = "2px"
-
     if (mode === "light") {
         theme.href = "styles/default.css"
         githubStat.src = githubStats
@@ -57,6 +52,5 @@ function setTheme(mode) {
         heart.innerHTML = "💜"
     }
 
-    document.getElementById(mode+"-mode").style.borderWidth = "5px"
     localStorage.setItem("theme", mode)
 }
