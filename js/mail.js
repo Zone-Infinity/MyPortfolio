@@ -16,8 +16,4 @@ function sendEmail() {
         embeds: [embed],
     });
     window.alert("Mail Sent!")
-    name = ""
-    email = ""
-    subject = ""
-    message = ""
 }
