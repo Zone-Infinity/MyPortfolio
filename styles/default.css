@@ -17,6 +17,7 @@
 
 
 html, body{
+    background-color: var(--secondaryColor);
     padding: 0;
     margin: 0;
 }
@@ -121,8 +122,14 @@ h6 { font-size: 16px;}
     margin-left: 5px;
 }
 
-.contact-link{
+.navigation-link {
+    border-radius: 20px;
+    padding: 10px;
     cursor: pointer;
+}
+
+.navigation-link:hover{
+    background-color: var(--secondaryColor);
 }
 
 .dots-wrapper {
@@ -320,6 +327,12 @@ h6 { font-size: 16px;}
     object-fit: cover;
 }
 
+.thumbnail:hover {
+    margin: -2.5%;
+    width: 105%;
+    height: 190px;
+}
+
 .post-preview {
     background-color: #fff;
     padding: 15px;
@@ -349,6 +362,27 @@ h6 { font-size: 16px;}
 
 .links:hover {
     background-color: var(--mainColor);
+}
+
+#github {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--mainText);
+}
+
+.github-wrapper {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.github-card {
+    border-radius: 10px;
+
+    -webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: -21px 7px 21px -9px rgba(0,0,0,0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
 }
 
 #contact-form {
@@ -391,6 +425,12 @@ h6 { font-size: 16px;}
     border: none;
 
     cursor: pointer;
+}
+
+#footer {
+    font-size: 14px;
+    color: var(--mainText);
+    text-align: center;
 }
 
 @media screen and (max-width: 1200px){

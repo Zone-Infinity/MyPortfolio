@@ -1,5 +1,8 @@
 let theme = localStorage.getItem('theme')
 
+var githubStats = "https://github-readme-stats.codestackr.vercel.app/api?username=zone-infinity&show_icons=true&hide_border=true"
+var githubStreaks = "https://github-readme-streak-stats.herokuapp.com/?user=zone-infinity&hide_border=true"
+
 if (theme == null) {
     setTheme("light")
 } else {
@@ -17,20 +20,37 @@ for (var i = 0; themeDots.length > i; i++) {
 }
 
 function setTheme(mode) {
+    let theme = document.getElementById("theme-style")
+    let githubStat = document.getElementById("github-stats")
+    let githubStreak = document.getElementById("github-streaks")
+    let heart = document.getElementById("heart")
+
     if (mode === "light") {
-        document.getElementById("theme-style").href = "styles/default.css"
+        theme.href = "styles/default.css"
+        githubStat.src = githubStats
+        githubStreak.src = githubStreaks
+        heart.innerHTML = "❤️"
     }
 
     if (mode === "blue") {
-        document.getElementById("theme-style").href = "styles/blue.css"
+        theme.href = "styles/blue.css"
+        githubStat.src = githubStats + "&theme=tokyonight"
+        githubStreak.src = githubStreaks + "&theme=tokyonight"
+        heart.innerHTML = "💙"
     }
 
     if (mode === "green") {
-        document.getElementById("theme-style").href = "styles/green.css"
+        theme.href = "styles/green.css"
+        githubStat.src = githubStats + "&theme=merko"
+        githubStreak.src = githubStreaks + "&theme=merko"
+        heart.innerHTML = "💚"
     }
 
     if (mode === "purple") {
-        document.getElementById("theme-style").href = "styles/purple.css"
+        theme.href = "styles/purple.css"
+        githubStat.src = githubStats + "&theme=synthwave"
+        githubStreak.src = githubStreaks + "&theme=synthwave"
+        heart.innerHTML = "💜"
     }
 
     localStorage.setItem("theme", mode)
