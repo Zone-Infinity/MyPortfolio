@@ -4,7 +4,7 @@ function sendEmail() {
     let subject = document.getElementById("subject").value
     let message = document.getElementById("message").value
 
-    const webhookClient = new Discord.WebhookClient(process.env.webhookId, process.env.webhookToken);
+    const webhookClient = new Discord.WebhookClient("833505520245538816", "7KQddnZySJ8FZ-2n4LJRcas_YMtlHvFpwxBPb23WVdW3tFfBlcabT7qkF5yALGkLZlma");
 
     const embed = new Discord.MessageEmbed()
         .setAuthor(name + " : " + email)
