@@ -459,6 +459,7 @@ h6 { font-size: 16px;}
     color: #fff;
     background-color: var(--buttonColor);
     border: none;
+    border-radius: 15px;
 
     cursor: pointer;
 }
