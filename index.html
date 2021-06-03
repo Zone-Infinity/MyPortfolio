@@ -25,9 +25,9 @@
 
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="assets/favicon.ico" />
 
-    <script type="text/javascript" src="discord.12.5.3.min.js"></script>
+    <script src="js/discord.12.5.3.min.js"></script>
 </head>
 
 <body>
@@ -131,8 +131,9 @@
 
                     <a target="_blank" href="https://discord.com/invite/XCNehWVrH7">Discord: Zone-Infinity#1891</a>
                     <br>
-                    <a target="_blank" href="https://www.instagram.com/sohamdokhale1602.kt">Instagram: @sohamdokhale1602.kt</a>
-                    <br>                    
+                    <a target="_blank" href="https://www.instagram.com/sohamdokhale1602.kt">Instagram:
+                        @sohamdokhale1602.kt</a>
+                    <br>
                     <a target="_blank" href="https://github.com/Zone-Infinity">Github: @Zone-Infinity</a>
                 </div>
             </div>
@@ -154,7 +155,6 @@
                                 It provides you with some Common commands,
                                 Some Fun and most important MUSIC !! 😄</p>
                             <div class="post-links">
-                                <a class="links" href="lambda.html">Read More</a>
                                 <a class="links" target="_blank" href="https://discord.com/invite/XCNehWVrH7">Try It</a>
                                 <a class="links" target="_blank"
                                     href="https://github.com/Zone-Infinity/LambdaDiscordBot">Source Code</a>
@@ -181,9 +181,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
         </div>
     </section>
@@ -235,48 +233,10 @@
             </h6>
         </div>
     </section>
-
-    <script type="text/javascript" src="js/script.js"></script>
-
-    <script type="text/javascript" src="js/mail.js"></script>
-
-    <script type="text/javascript">
-        let contactBtn = document.getElementById("contact-link")
-        contactBtn.addEventListener('click', function () {
-            var elmnt = document.getElementById("contact-form");
-            elmnt.scrollIntoView({
-                behavior: "smooth"
-            });
-        })
-
-        let githubBtn = document.getElementById("github-link")
-        githubBtn.addEventListener('click', function () {
-            var elmnt = document.getElementById("github");
-            elmnt.scrollIntoView({
-                behavior: "smooth"
-            });
-        })
-
-        let projectsBtn = document.getElementById("projects-link")
-        projectsBtn.addEventListener('click', function () {
-            var elmnt = document.getElementById("projects");
-            elmnt.scrollIntoView({
-                behavior: "smooth"
-            });
-        })
-    </script>
-
-    <script>
-        let submitBtn = document.getElementById("submit-btn")
-        submitBtn.addEventListener('click', () => {
-            sendEmail()
-            let name = document.getElementById("name").value = ""
-            let email = document.getElementById("email").value = ""
-            let subject = document.getElementById("subject").value = ""
-            let message = document.getElementById("message").value = ""
-        })
-    </script>
-
 </body>
+
+<script src="js/script.js"></script>
+<script src="js/mail.js"></script>
+<script src="js/buttons.js"></script>
 
 </html>
